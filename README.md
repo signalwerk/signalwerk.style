@@ -15,3 +15,6 @@ Replace `gh-pages` in the url with the full commit-hash and change subdomain `ra
 <link rel="stylesheet" href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/738cf7dbad4d3d11609b429176489d6bbb9dbc19/styles/main.critical.css" media="all" />
 <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/738cf7dbad4d3d11609b429176489d6bbb9dbc19/styles/main.rest.css" media="all" />
 ```
+
+## ToDo
+Set Build with [static site generator webpack plugin](https://github.com/markdalgleish/static-site-generator-webpack-plugin).
