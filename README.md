@@ -1,4 +1,5 @@
 # Signalwerk Style
+[![Build Status](https://ci.signalwerk.ch/api/badges/signalwerk/signalwerk.styles/status.svg)](https://ci.signalwerk.ch/signalwerk/signalwerk.styles)
 
 ## Usage
 
