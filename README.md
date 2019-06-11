@@ -9,9 +9,9 @@
 ```
 
 ## Versioned
-Replace `gh-pages` in the url with the full commit-hash. Example:
+Replace `gh-pages` in the url with the full commit-hash and change subdomain `raw` to `rawcdn`. Example:
 
 ```html
-<link rel="stylesheet" href="https://raw.githack.com/signalwerk/signalwerk.styles/9b58e06c11b0ddece37d12c0b8682357f7e5f9ee/styles/main.critical.css" media="all" />
-<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://raw.githack.com/signalwerk/signalwerk.styles/9b58e06c11b0ddece37d12c0b8682357f7e5f9ee/styles/main.rest.css" media="all" />
+<link rel="stylesheet" href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/738cf7dbad4d3d11609b429176489d6bbb9dbc19/styles/main.critical.css" media="all" />
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/738cf7dbad4d3d11609b429176489d6bbb9dbc19/styles/main.rest.css" media="all" />
 ```
