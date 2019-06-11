@@ -1,0 +1,9 @@
+p {
+  margin-top: 0.3em;
+  margin-bottom: 0.1em;
+}
+
+.next-bg + p {
+  padding: 1em;
+  background-color: var(--gray-color);
+}

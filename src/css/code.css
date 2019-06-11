@@ -1,0 +1,19 @@
+
+pre,
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  background-color: var(--gray-color);
+  border-radius: 0.2em;
+  font-size: 85%;
+}
+code {
+  margin: 0;
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  padding: 1em;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+}

@@ -1,0 +1,9 @@
+blockquote {
+  font-weight: 700;
+  color: var(--green-color);
+  line-height: 1.7;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
