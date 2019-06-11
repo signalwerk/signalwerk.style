@@ -1,0 +1,360 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+
+/* reset css */
+/* critical:start */
+/* inspiration
+- https://alligator.io/css/minimal-css-reset/
+*/
+:root {
+  --green-color: #006984;  /* c: 100 m: 0 y: 20 k: 65 */
+  --blue-color: #0054a2; /* c: 100 m: 70 y: 10 k: 52 */
+  --gray-color: #e6e8ea;
+  --gray-red: #f00; /* c: 0 m: 100 y: 100 k: 0 */
+}
+::-moz-selection {
+  background: #0054a2;
+  background: var(--blue-color);
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background: #0054a2;
+  background: var(--blue-color);
+  color: white;
+  text-shadow: none;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+body,
+p,
+ol,
+ul {
+  font-size: 1rem;
+}
+p {
+  margin-top: 0.3em;
+  margin-bottom: 0.1em;
+}
+.next-bg + p {
+  padding: 1em;
+  background-color: #e6e8ea;
+  background-color: var(--gray-color);
+}
+hr {
+  border: none;
+  height: 0.3rem;
+  background-color: #e6e8ea;
+  background-color: var(--gray-color);
+
+  margin-bottom: 2.3rem;
+  margin-top: 2rem;
+}
+hr.thick {
+  height: 1rem;
+}
+ul,
+ol {
+  padding-left: 1em;
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+ul {
+  list-style: none;
+}
+ul > li::before {
+  content: "\2013\A0";
+  color: #0054a2;
+  color: var(--blue-color);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+ol {
+  counter-reset: ol-li;
+  padding-left: 0;
+}
+ol > li {
+  position: relative;
+  margin: 0 0 0 1.75em;
+  list-style: none;
+  padding-bottom: 0.2em;
+}
+ol > li:before {
+  content: counter(ol-li);
+  counter-increment: ol-li;
+
+  position: absolute;
+  top: 0.1em;
+
+  left: -1.75em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+
+  font-size: 0.85em;
+  font-weight: 700;
+  text-align: center;
+
+  color: white;
+  background: #0054a2;
+  background: var(--blue-color);
+}
+a {
+    text-decoration: none;
+    color: #006984;
+    color: var(--green-color);
+}
+a:visited {
+    color: #0054a2;
+    color: var(--blue-color);
+}
+a:hover {
+    color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img {
+  margin: 1em 0;
+}
+blockquote {
+  font-weight: 700;
+  color: #006984;
+  color: var(--green-color);
+  line-height: 1.7;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-top: 0.3em;
+  margin-bottom: 0.1em;
+}
+h1 {
+  font-size: 1.2rem;
+  margin-bottom: 2em;
+}
+h2 {
+  font-size: 1.05rem;
+  margin-top: 1em;
+}
+h3 {
+  font-size: 0.95rem;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+h1,
+h3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+pre,
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  background-color: #e6e8ea;
+  background-color: var(--gray-color);
+  border-radius: 0.2em;
+  font-size: 85%;
+}
+code {
+  margin: 0;
+  padding: 0.2em 0.4em;
+}
+pre {
+  padding: 1em;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+}
+.content {
+  width: 92%;
+  max-width: 36rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+.grid-12col {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.col-1to6,
+.col-7to12 {
+  max-width: 48.5%;
+  -ms-flex-preferred-size: 48.5%;
+      flex-basis: 48.5%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.col-1to4 {
+  max-width: 32.333%;
+  -ms-flex-preferred-size: 32.333%;
+      flex-basis: 32.333%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.col-5to12 {
+  max-width: 64.666%;
+  -ms-flex-preferred-size: 64.666%;
+      flex-basis: 64.666%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.col-all {
+  max-width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+em,
+strong,
+b {
+  font-style: normal;
+  font-weight: 700;
+}
+/* critical:end */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+th {
+  text-align: left;
+}
+tr {
+  border-bottom: 0.12rem solid #e6e8ea;
+  border-bottom: 0.12rem solid var(--gray-color);
+}
+td,
+th {
+  vertical-align: top;
+  padding-right: 1rem;
+}
+td:last-child,
+th:last-child {
+  padding-right: 0;
+}
+table {
+  -webkit-font-feature-settings: "lnum" 1, "tnum" 1;
+          font-feature-settings: "lnum" 1, "tnum" 1;
+}
+@supports (font-variant-numeric: lining-nums) {
+  table {
+    -webkit-font-feature-settings: normal, lining-nums tabular-nums;
+            font-feature-settings: normal, lining-nums tabular-nums;
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+}
+@media screen and (min-width: 37rem) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 60rem) {
+  html {
+    font-size: 20px;
+  }
+}
+@media print {
+  html {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    font-size: 10pt;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+  }
+  .content {
+    margin-right: 0;
+  }
+
+    @page {
+        size: A4;
+        margin: 5mm 10mm 7mm 25mm;
+    }
+
+
+    .content {
+        display: block;
+        page-break-before: always;
+        counter-increment: page;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 1.5rem;
+        border-bottom: 0.05rem solid black;
+        margin-bottom: 3.5rem
+    }
+
+        .content:after {
+            display: inline-block;
+            padding-top: 0.4em;
+            content: "Signalwerk GmbH \B7   Stefan Huber \B7   CC BY-SA 4.0";
+            float: left;
+            white-space: nowrap;
+            text-align: left;
+            position: absolute;
+        }
+
+        .content:before {
+            display: inline-block;
+            padding-top: 0.0em;
+            content: counter(page);
+            content: " " counter(page);
+            float: right;
+            white-space: nowrap;
+        }
+  tr {
+    page-break-inside: avoid;
+  }
+}
+
+
+/*# sourceMappingURL=main.css.map*/
