@@ -15,6 +15,9 @@ tr {
   border-bottom: 0.12rem solid #e6e8ea;
   border-bottom: 0.12rem solid var(--gray-color);
 }
+tr:hover {
+    background-color: #f4f4f4;
+}
 td,
 th {
   vertical-align: top;
