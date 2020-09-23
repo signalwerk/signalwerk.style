@@ -12,6 +12,11 @@ th {
 tr {
   border-bottom: 0.12rem solid var(--gray-color);
 }
+
+tr:hover {
+  background-color: rgba(24, 24, 24, 0.1);
+}
+
 td,
 th {
   vertical-align: top;
