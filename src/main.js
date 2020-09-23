@@ -1,1 +1,1 @@
-import 'fg-loadcss/dist/cssrelpreload';
+console.log("started");
