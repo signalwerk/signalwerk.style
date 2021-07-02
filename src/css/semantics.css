@@ -6,16 +6,8 @@ article > header {
   padding-bottom: 2rem;
 }
 
-article > header > h1 {
-  margin-bottom: 0.8em;
-}
-
-article > header p,
-article > header address {
-  margin: 0;
-}
-
-article > header address {
+article > header address,
+article > header .small--first {
   font-style: normal;
   margin-top: 4.5rem;
 }
@@ -24,10 +16,6 @@ article > section,
 article > footer {
   padding-bottom: 3rem;
   border-top: 2px solid #222;
-}
-article > section > h2,
-article > footer > h2 {
-  margin-bottom: 2.5em;
 }
 
 article .small {
