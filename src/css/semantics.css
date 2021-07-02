@@ -18,6 +18,11 @@ article > footer {
   border-top: 2px solid #222;
 }
 
+article > section > h2:first-child,
+article > footer > h2:first-child {
+  margin-top: 0.7em;
+}
+
 article .small {
   font-size: 0.8rem;
 }
