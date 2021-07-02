@@ -12,8 +12,8 @@
 Replace `gh-pages` in the url with the full commit-hash and change subdomain `raw` to `rawcdn`. Example:
 
 ```html
-<link rel="stylesheet" href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/0248342/styles/main.critical.css" media="all" />
-<link rel="stylesheet" href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/0248342/styles/main.rest.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/73e9aa6/styles/main.critical.css" media="all" />
+<link rel="stylesheet" href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/73e9aa6/styles/main.rest.css" media="print" onload="this.media='all'">
 ```
 
 ## ToDo
