@@ -32,16 +32,8 @@ th:last-child {
 }
 
 table {
-  -webkit-font-feature-settings: "lnum" 1, "tnum" 1;
-          font-feature-settings: "lnum" 1, "tnum" 1;
-}
-
-@supports (font-variant-numeric: lining-nums) {
-  table {
-    -webkit-font-feature-settings: normal, lining-nums tabular-nums;
-            font-feature-settings: normal, lining-nums tabular-nums;
-    font-variant-numeric: lining-nums tabular-nums;
-  }
+  --open-sans-fea-lnum: "lnum" on;
+  --open-sans-fea-tnum: "tnum" on;
 }
 
 @media screen and (min-width: 37rem) {
