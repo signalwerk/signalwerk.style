@@ -36,12 +36,6 @@ th:last-child {
 }
 
 table {
-  font-feature-settings: "lnum" 1, "tnum" 1;
-}
-
-@supports (font-variant-numeric: lining-nums) {
-  table {
-    font-feature-settings: normal;
-    font-variant-numeric: lining-nums tabular-nums;
-  }
+  --open-sans-fea-lnum: "lnum" on;
+  --open-sans-fea-tnum: "tnum" on;
 }
