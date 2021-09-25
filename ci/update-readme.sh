@@ -3,9 +3,16 @@ set -e # Exit with nonzero exit code if anything fails
 echo "-- start"
 
 SOURCE_BRANCH="${SOURCE_BRANCH:-master}"
+ROOT_DIR=$(pwd)
+REPO=`git config remote.origin.url`
+SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 
 
-
+echo "   * Variables"
+echo "     – SOURCE_BRANCH=${SOURCE_BRANCH}"
+echo "     – ROOT_DIR=${ROOT_DIR}"
+echo "     – REPO=${REPO}"
+echo "     – SSH_REPO=${SSH_REPO}"
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
 if [ $DRONE ]; then
@@ -31,7 +38,9 @@ git checkout master
 hash=`git ls-remote git://github.com/signalwerk/signalwerk.styles.git | grep refs/heads/gh-pages | cut -f 1 | awk '{ print substr($1,1,7) }'`
 echo "style-hash: $hash"
 
-sed -i '' -E "s/(signalwerk.styles\/)[a-f0-9]{7}(\/styles)/\1$hash\2/g" README.md
+# macos
+# sed -i '' -E "s/(signalwerk.styles\/)[a-f0-9]{7}(\/styles)/\1$hash\2/g" README.md
+sed -i -r "s/(signalwerk.styles\/)[a-f0-9]{7}(\/styles)/\1$hash\2/g" README.md
 
 
 
