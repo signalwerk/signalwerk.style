@@ -20,6 +20,11 @@ if [ $DRONE ]; then
 fi
 
 
+git config user.name "CI System"
+git config user.email "$COMMIT_AUTHOR_EMAIL"
+
+
+git checkout master
 
 
 
@@ -29,11 +34,7 @@ echo "style-hash: $hash"
 sed -i '' -E "s/(signalwerk.styles\/)[a-f0-9]{7}(\/styles)/\1$hash\2/g" README.md
 
 
-git config user.name "CI System"
-git config user.email "$COMMIT_AUTHOR_EMAIL"
 
-
-git checkout master
 git add -A README.md
 git commit -m "Update readme [CI SKIP]"
 

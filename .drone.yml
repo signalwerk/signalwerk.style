@@ -7,6 +7,7 @@ steps:
     commands:
       - npm ci
       - bash ./ci/gh-pages.sh
+      - bash ./ci/update-readme.sh
     environment:
       DECRYPT_KEY:
         from_secret: "DECRYPT_KEY"
@@ -15,14 +16,3 @@ steps:
     when:
       branch:
         - master
-  - name: update-readme
-    image: node:10
-    commands:
-      - bash ./update-readme.sh
-    environment:
-      DECRYPT_KEY:
-        from_secret: "DECRYPT_KEY"
-      COMMIT_AUTHOR_EMAIL: "sh@signalwerk.ch"
-    when:
-      ref:
-        - refs/heads/gh-pages
