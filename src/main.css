@@ -15,6 +15,7 @@
 @import "./css/grid";
 @import "./css/semantics";
 @import "./css/em";
+@import "./css/small";
 /* critical:end */
 
 @import "./css/print";
