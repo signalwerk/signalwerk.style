@@ -36,14 +36,14 @@ Replace `gh-pages` in the url with the full commit-hash and change subdomain `ra
 />
 <link
   rel="stylesheet"
-  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/de2666d/styles/main.critical.css"
+  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/716a8d0/styles/main.critical.css"
   media="all"
 />
 <link
   rel="preload"
   as="style"
   onload="this.onload=null;this.rel='stylesheet'"
-  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/de2666d/styles/main.rest.css"
+  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/716a8d0/styles/main.rest.css"
   media="all"
 />
 ```
