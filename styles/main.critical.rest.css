@@ -40,9 +40,9 @@
   --open-sans-fea-lnum: "lnum" off;
   --open-sans-fea-locl: "locl" on;
   --open-sans-fea-numr: "numr" off;
-  --open-sans-fea-onum: "onum" off;
+  --open-sans-fea-onum: "onum" on;
   --open-sans-fea-ordn: "ordn" off;
-  --open-sans-fea-pnum: "pnum" off;
+  --open-sans-fea-pnum: "pnum" on;
   --open-sans-fea-salt: "salt" off;
   --open-sans-fea-ss01: "ss01" off;
   --open-sans-fea-ss02: "ss02" off;
@@ -60,8 +60,8 @@ html {
   -webkit-font-feature-settings: "aalt" off, "dnom" off,
     "frac" off, "liga" on,
     "lnum" off, "locl" on,
-    "numr" off, "onum" off,
-    "ordn" off, "pnum" off,
+    "numr" off, "onum" on,
+    "ordn" off, "pnum" on,
     "salt" off, "ss01" off,
     "ss02" off, "ss03" off,
     "subs" off, "sups" off,
@@ -69,8 +69,8 @@ html {
           font-feature-settings: "aalt" off, "dnom" off,
     "frac" off, "liga" on,
     "lnum" off, "locl" on,
-    "numr" off, "onum" off,
-    "ordn" off, "pnum" off,
+    "numr" off, "onum" on,
+    "ordn" off, "pnum" on,
     "salt" off, "ss01" off,
     "ss02" off, "ss03" off,
     "subs" off, "sups" off,
