@@ -7,7 +7,7 @@
 ```html
 <link rel="preconnect" href="https://fonts.signalwerk.ch" />
 <link
-  href="https://fonts.signalwerk.ch/css/latest/family=OpenSans:ital,wght@0,300..800;1,300..800.css"
+  href="https://fonts.signalwerk.ch/css/latest/family=Open+Sans:ital,wght@0,300..800;1,300..800.css"
   rel="stylesheet"
 />
 <link
@@ -24,12 +24,19 @@
 />
 ```
 
+## Fonts from Google
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+```
 ## Usage
 
 ```html
 <link rel="preconnect" href="https://fonts.signalwerk.ch" />
 <link
-  href="https://fonts.signalwerk.ch/css/latest/family=OpenSans:ital,wght@0,300..800;1,300..800.css"
+  href="https://fonts.signalwerk.ch/css/latest/family=Open+Sans:ital,wght@0,300..800;1,300..800.css"
   rel="stylesheet"
 />
 <link
@@ -47,5 +54,5 @@
 ```
 
 ## ToDo
-
+* No ligatures in Code/pre
 Set Build with [static site generator webpack plugin](https://github.com/markdalgleish/static-site-generator-webpack-plugin).
