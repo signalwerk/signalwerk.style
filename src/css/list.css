@@ -2,10 +2,20 @@ ul,
 ol {
   padding-left: 1em;
   margin: 0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  ul,
+  ol {
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
+li {
+  /* same as p bottom */
+  margin-bottom: 0.3em;
+}
 
 ul {
   list-style: none;
@@ -17,9 +27,33 @@ ul > li::before {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+
 }
 
 ol {
+  counter-reset: ol-li;
+  list-style: none;
+  padding-left: 1.4em;
+}
+
+ol > li > p {
+  display: inline;
+}
+
+ol > li::before {
+  content: counter(ol-li) ".";
+  counter-increment: ol-li;
+
+  display: inline-block;
+  width: 1.4em;
+  margin-left: -1.4em;
+
+
+  text-align: center;
+  margin-right: 0.35em;
+}
+
+/* ol {
   counter-reset: ol-li;
   padding-left: 0;
 }
@@ -49,4 +83,4 @@ ol > li:before {
 
   color: white;
   background: var(--blue-color);
-}
+} */
