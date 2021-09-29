@@ -160,6 +160,17 @@ ul ul,
     margin-bottom: 0.5rem;
   }
 
+/* List direct after title */
+
+h1 + ul, h1 + ol,
+h2 + ul, h2 + ol,
+h3 + ul, h3 + ol,
+h4 + ul, h4 + ol,
+h5 + ul, h5 + ol,
+h6 + ul, h6 + ol {
+  margin-top: 0.25em;
+}
+
 li {
   /* same as p bottom */
   margin-bottom: 0.3em;
@@ -277,7 +288,7 @@ h5,
 h6 {
   font-weight: 700;
   margin-top: 1.4em;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.3em;
 }
 
 h1 {
@@ -335,8 +346,8 @@ h1 {
 
 h2 {
   font-size: 1.15rem;
-  margin-top: 1.5em;
-  margin-bottom: 0.9em;
+  margin-top: 1.6em;
+  margin-bottom: 0.4em;
 }
 
 h3 {
