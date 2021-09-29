@@ -55,4 +55,7 @@
 
 ## ToDo
 * No ligatures in Code/pre
-Set Build with [static site generator webpack plugin](https://github.com/markdalgleish/static-site-generator-webpack-plugin).
+* Implement Code-Font
+
+## Usage
+* [Signalwerk · Webtypo](https://webtypo.signalwerk.ch/
