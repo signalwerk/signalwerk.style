@@ -10,6 +10,7 @@
   --green-color: #006984; /* c: 100 m: 0 y: 20 k: 65 */
   --blue-color: #0054a2; /* c: 100 m: 70 y: 10 k: 52 */
   --gray-color: #e6e8ea;
+  --brown-color: rgb(178, 112, 0);
   --gray-red: #f00; /* c: 0 m: 100 y: 100 k: 0 */
 }
 
@@ -97,7 +98,7 @@ html {
     var(--open-sans-fea-tnum), var(--open-sans-fea-zero);
 
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -147,8 +148,21 @@ ul,
 ol {
   padding-left: 1em;
   margin: 0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+li {
+  /* same as p bottom */
+  margin-bottom: 0.3em;
 }
 
 ul {
@@ -162,9 +176,33 @@ ul > li::before {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+
 }
 
 ol {
+  counter-reset: ol-li;
+  list-style: none;
+  padding-left: 1.4em;
+}
+
+ol > li > p {
+  display: inline;
+}
+
+ol > li::before {
+  content: counter(ol-li) ".";
+  counter-increment: ol-li;
+
+  display: inline-block;
+  width: 1.4em;
+  margin-left: -1.4em;
+
+
+  text-align: center;
+  margin-right: 0.35em;
+}
+
+/* ol {
   counter-reset: ol-li;
   padding-left: 0;
 }
@@ -193,9 +231,8 @@ ol > li:before {
   text-align: center;
 
   color: white;
-  background: #0054a2;
   background: var(--blue-color);
-}
+} */
 
 a {
     text-decoration: none;
@@ -239,8 +276,8 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  margin-top: 1em;
-  margin-bottom: 0.1em;
+  margin-top: 1.4em;
+  margin-bottom: 0.4em;
 }
 
 h1 {
@@ -317,7 +354,7 @@ code {
 code {
   margin: 0;
   padding: 0.2em 0.4em;
-  font-size: 82%;
+  font-size: 75%;
 }
 
 pre {
@@ -446,8 +483,9 @@ table {
   width: 100%;
   font-size: 0.9rem;
   border-collapse: collapse;
-  margin-top: 0.3;
-  margin-bottom: 0.3;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 th {
@@ -520,7 +558,7 @@ table {
 
 @media screen and (min-width: 37rem) {
   html {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
