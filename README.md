@@ -12,14 +12,14 @@
 />
 <link
   rel="stylesheet"
-  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/0164f08/styles/main.critical.css"
+  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/94770c3/styles/main.critical.css"
   media="all"
 />
 <link
   rel="preload"
   as="style"
   onload="this.onload=null;this.rel='stylesheet'"
-  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/0164f08/styles/main.rest.css"
+  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/94770c3/styles/main.rest.css"
   media="all"
 />
 ```
