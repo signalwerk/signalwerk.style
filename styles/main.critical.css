@@ -247,8 +247,8 @@ h1 {
 
   /* deactivate Oldstyle figures and ligatures for uppercases */
   --open-sans-fea-liga: "liga" off;
-  --open-sans-fea-pnum: "lnum" on;
-  --open-sans-fea-lnum: "onum" off;
+  --open-sans-fea-lnum: "lnum" on;
+  --open-sans-fea-onum: "onum" off;
 
   -webkit-font-feature-settings: "aalt" off, "dnom" off,
     "frac" off, "liga" on,
