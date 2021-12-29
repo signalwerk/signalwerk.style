@@ -1,0 +1,16 @@
+@define-mixin uppercase {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  /* deactivate Oldstyle figures and ligatures for uppercases */
+  --open-sans-fea-liga: "liga" off;
+  --open-sans-fea-lnum: "lnum" on;
+  --open-sans-fea-onum: "onum" off;
+
+  font-feature-settings: var(--open-sans-fea-default), var(--open-sans-fea-liga),
+    var(--open-sans-fea-lnum), var(--open-sans-fea-onum);
+}
+
+.uppercase {
+  @mixin uppercase;
+}

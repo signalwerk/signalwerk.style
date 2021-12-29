@@ -1,0 +1,32 @@
+.document__item > .collection > .markdown,
+.document__item > .collection > .image {
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: $document--content---max-width;
+}
+
+.debug .document__item > .collection > .markdown {
+  background-color: red;
+}
+
+.document__item > .collection > .grid > .grid__inner,
+.document__item > .collection > .markdown > .markdown__inner {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+@media screen and (min-width: $breakpoint-m) {
+  .document__item > .collection > .grid > .grid__inner,
+  .document__item > .collection > .markdown > .markdown__inner {
+    margin-left: 15%;
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: $breakpoint-l) {
+  .document__item > .collection > .grid > .grid__inner,
+  .document__item > .collection > .markdown > .markdown__inner {
+    margin-left: 23%;
+    margin-right: 7%;
+  }
+}

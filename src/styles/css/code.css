@@ -1,7 +1,7 @@
-
 pre,
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
   background-color: var(--gray-color);
   border-radius: 0.2em;
 }
@@ -9,6 +9,7 @@ code {
   margin: 0;
   padding: 0.2em 0.4em;
   font-size: 75%;
+  font-weight: $source-code-pro-sans-400-75p-compensated;
 }
 
 pre {
@@ -18,4 +19,5 @@ pre {
 
 pre code {
   line-height: 1.45;
+  padding: 0;
 }

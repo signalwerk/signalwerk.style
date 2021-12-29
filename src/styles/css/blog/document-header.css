@@ -1,0 +1,26 @@
+.header {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  width: $document--content---width;
+  max-width: $document--header---max-width;
+}
+
+.header__subline {
+  font-size: 1.1em;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: $breakpoint-l) {
+  .header__subline {
+    font-size: 1.2em;
+    width: 70%;
+    margin-bottom: 2rem;
+  }
+}
+
+.header__info {
+  @mixin uppercase;
+  @mixin small;
+}

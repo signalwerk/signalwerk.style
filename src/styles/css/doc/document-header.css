@@ -1,0 +1,43 @@
+.header {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: $document--content---width;
+  max-width: $document--content---max-width;
+
+  padding-top: 2.2rem;
+
+  border-bottom: 2px solid #222;
+  margin-bottom: 2.4rem;
+
+  /* same as <hr/> bottom */
+  margin-bottom: 2.4rem;
+}
+
+@media print {
+  .header {
+    margin-right: 0;
+  }
+}
+
+.header__inner {
+  padding-bottom: 1.5rem;
+}
+
+.header + .document__item {
+  /* same as <hr/> bottom */
+  &:before {
+    content: "";
+    margin-bottom: -1.7rem;
+    display: block;
+  }
+}
+
+.header__subline {
+  margin-bottom: 5.5rem;
+}
+
+.header__info {
+  margin-top: 5.5rem;
+  @mixin small;
+}

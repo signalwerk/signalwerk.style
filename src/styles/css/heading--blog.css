@@ -1,0 +1,8 @@
+@import "./heading.css";
+
+@media screen and (min-width: $breakpoint-l) {
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 0.2em;
+  }
+}

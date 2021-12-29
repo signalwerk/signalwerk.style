@@ -1,0 +1,63 @@
+/* compile variables */
+
+/* MediaQuery */
+$breakpoint-m: 37rem;
+$breakpoint-l: 60rem;
+
+/* inspiration
+- https://alligator.io/css/minimal-css-reset/
+*/
+
+:root {
+  --green-color: #006984; /* c: 100 m: 0 y: 20 k: 65 */
+  --blue-color: #0054a2; /* c: 100 m: 70 y: 10 k: 52 */
+  --gray-color: #e6e8ea;
+  --brown-color: rgb(178, 112, 0);
+  --gray-red: #f00; /* c: 0 m: 100 y: 100 k: 0 */
+}
+
+
+:root {
+  /* critical:start */
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  /* critical:end */
+  font-feature-settings: var(--open-sans-fea-default);
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: $breakpoint-m) {
+  :root {
+    /* critical */
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-l) {
+  :root {
+    /* critical */
+    font-size: 20px;
+  }
+}
+
+@media print {
+  :root {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    font-size: 10pt;
+  }
+}
+
+::selection {
+  background: var(--blue-color);
+  color: white;
+  text-shadow: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

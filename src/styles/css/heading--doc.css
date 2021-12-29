@@ -1,0 +1,5 @@
+@import "./heading.css";
+
+h1 {
+  @mixin uppercase;
+}

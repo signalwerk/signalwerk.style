@@ -1,0 +1,9 @@
+hr + h2,
+hr + h3,
+hr + h4 {
+  &:before {
+    content: "";
+    margin-bottom: -1.7rem;
+    display: table;
+  }
+}

@@ -1,0 +1,9 @@
+@import "./base";
+
+/* tags */
+@import "./css/heading--doc.css";
+@import "./css/hr--doc.css";
+
+@import "./css/doc/document-main.var.css";
+@import "./css/doc/document-content.css";
+@import "./css/doc/document-header.css";

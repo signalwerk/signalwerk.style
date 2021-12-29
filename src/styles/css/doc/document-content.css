@@ -1,0 +1,18 @@
+.document__item {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: $document--content---width;
+  max-width: $document--content---max-width;
+}
+
+@media print {
+  .content {
+    right: 0;
+    top: 0;
+  }
+
+  .document__item {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,58 @@
+table {
+  width: 100%;
+  font-size: 0.9em;
+  border-collapse: collapse;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+@media print {
+  table {
+    page-break-before: always;
+  }
+}
+
+@media screen and (min-width: $breakpoint-l) {
+  table {
+    font-size: 1em;
+  }
+}
+
+th {
+  text-align: left;
+}
+
+tr {
+  border-bottom: 1px solid var(--gray-color);
+}
+
+@media print {
+  tr {
+    page-break-inside: avoid;
+    border-bottom: 0.1em solid var(--gray-color);
+  }
+}
+
+td,
+th {
+  vertical-align: top;
+  padding-right: 1em;
+
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+td:last-child,
+th:last-child {
+  padding-right: 0;
+}
+
+table {
+  /* lining figures in tables */
+  --open-sans-fea-pnum: "pnum" off;
+  --open-sans-fea-lnum: "lnum" on;
+
+  font-feature-settings: var(--open-sans-fea-default), var(--open-sans-fea-pnum),
+    var(--open-sans-fea-lnum);
+}

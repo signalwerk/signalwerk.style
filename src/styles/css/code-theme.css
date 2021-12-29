@@ -1,0 +1,41 @@
+/* HTML Color */
+/* code.language-html {
+  color: black;
+} */
+
+.language-html {
+  .hljs-tag {
+    color: var(--blue-color);
+  }
+  .hljs-name,
+  .hljs-attr {
+    color: var(--brown-color);
+  }
+  .hljs-string {
+    color: var(--green-color);
+  }
+}
+/* CSS Color */
+
+code.language-css {
+  color: var(--blue-color);
+}
+
+.language-css {
+  .hljs-selector-class {
+    color: var(--green-color);
+  }
+  .hljs-attribute {
+    color: var(--brown-color);
+  }
+  .hljs-comment {
+    color: #888;
+  }
+  /* .hljs-attribute {
+      color: #006984;
+    }
+    .hljs-keyword,
+    .hljs-selector-tag {
+      color: rgb(178, 112, 0);
+    } */
+}
