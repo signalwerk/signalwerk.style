@@ -1,0 +1,498 @@
+/* https://github.com/googlefonts/opensans */
+/* 
+
+regular: 400 = 83
+bold: 700 = 151
+
+(700 - 400) = (151 - 83) 
+300 = 68
+
+400 * .75 = 300
+
+diff = 400 - 300 = 100 
+
+1 / .75 = 1.333
+
+Regular font has a stem width of 83 units.
+if it gets scaled down by 75% the stem is now only 83 * .75 = 62.25 units.
+we need to compensate that missing 20.75 (83 - 62.25) units on a scaled factor (20.75 / .75) 27.66666667
+
+if we raise the font-weight unit by one we gain the following units:
+(151 - 83) / (700 - 400) = 0.22666667 units
+
+how mani font-weight units are needed to get the same stem width as regular font?
+
+27.66666667 / 0.22666667 = 122.05882175 units
+
+new font-weight unit = 400 + 122.05882175 = 522.05882353
+
+formula: 
+400 + ((83 - (83 * .75)) / .75) / ((151 - 83) / (700 - 400))
+
+*/
+/* todo this is not done right now*/
+:root {
+  --open-sans-fea-aalt: "aalt" off;
+  --open-sans-fea-dnom: "dnom" off;
+  --open-sans-fea-frac: "frac" off;
+  --open-sans-fea-liga: "liga" on;
+  --open-sans-fea-lnum: "lnum" off;
+  --open-sans-fea-locl: "locl" on;
+  --open-sans-fea-numr: "numr" off;
+  --open-sans-fea-onum: "onum" on;
+  --open-sans-fea-ordn: "ordn" off;
+  --open-sans-fea-pnum: "pnum" on;
+  --open-sans-fea-salt: "salt" off;
+  --open-sans-fea-ss01: "ss01" off;
+  --open-sans-fea-ss02: "ss02" off;
+  --open-sans-fea-ss03: "ss03" off;
+  --open-sans-fea-subs: "subs" off;
+  --open-sans-fea-sups: "sups" off;
+  --open-sans-fea-tnum: "tnum" off;
+  --open-sans-fea-zero: "zero" off;
+
+  --open-sans-fea-default: var(--open-sans-fea-aalt), var(--open-sans-fea-dnom),
+    var(--open-sans-fea-frac), var(--open-sans-fea-liga),
+    var(--open-sans-fea-lnum), var(--open-sans-fea-locl),
+    var(--open-sans-fea-numr), var(--open-sans-fea-onum),
+    var(--open-sans-fea-ordn), var(--open-sans-fea-pnum),
+    var(--open-sans-fea-salt), var(--open-sans-fea-ss01),
+    var(--open-sans-fea-ss02), var(--open-sans-fea-ss03),
+    var(--open-sans-fea-subs), var(--open-sans-fea-sups),
+    var(--open-sans-fea-tnum), var(--open-sans-fea-zero);
+}
+/* compile variables */
+/* MediaQuery */
+/* inspiration
+- https://alligator.io/css/minimal-css-reset/
+*/
+:root {
+  --green-color: #006984; /* c: 100 m: 0 y: 20 k: 65 */
+  --blue-color: #0054a2; /* c: 100 m: 70 y: 10 k: 52 */
+  --gray-color: #e6e8ea;
+  --brown-color: rgb(178, 112, 0);
+  --gray-red: #f00; /* c: 0 m: 100 y: 100 k: 0 */
+}
+:root {
+  -webkit-font-feature-settings: var(--open-sans-fea-default);
+          font-feature-settings: var(--open-sans-fea-default);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+::-moz-selection {
+  background: var(--blue-color);
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background: var(--blue-color);
+  color: white;
+  text-shadow: none;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+body {
+  margin: 0;
+}
+/* modifiers */
+.uppercase {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  /* deactivate Oldstyle figures and ligatures for uppercases */
+  --open-sans-fea-liga: "liga" off;
+  --open-sans-fea-lnum: "lnum" on;
+  --open-sans-fea-onum: "onum" off;
+  -webkit-font-feature-settings: var(--open-sans-fea-default), var(--open-sans-fea-liga),
+    var(--open-sans-fea-lnum), var(--open-sans-fea-onum);
+          font-feature-settings: var(--open-sans-fea-default), var(--open-sans-fea-liga),
+    var(--open-sans-fea-lnum), var(--open-sans-fea-onum);
+}
+/* tags */
+small,
+.small {
+  font-size: 80%;
+}
+/* @import "./css/heading.css"; */
+img {
+  max-width: 100%;
+  display: block;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+table {
+  width: 100%;
+  font-size: 0.9em;
+  border-collapse: collapse;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+th {
+  text-align: left;
+}
+tr {
+  border-bottom: 1px solid var(--gray-color);
+}
+td,
+th {
+  vertical-align: top;
+  padding-right: 1em;
+
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+td:last-child,
+th:last-child {
+  padding-right: 0;
+}
+table {
+  /* lining figures in tables */
+  --open-sans-fea-pnum: "pnum" off;
+  --open-sans-fea-lnum: "lnum" on;
+
+  -webkit-font-feature-settings: var(--open-sans-fea-default), var(--open-sans-fea-pnum),
+    var(--open-sans-fea-lnum);
+
+          font-feature-settings: var(--open-sans-fea-default), var(--open-sans-fea-pnum),
+    var(--open-sans-fea-lnum);
+}
+blockquote {
+  font-weight: 700;
+  color: var(--green-color);
+  line-height: 1.7;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+pre,
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  background-color: var(--gray-color);
+  border-radius: 0.2em;
+}
+code {
+  margin: 0;
+  padding: 0.2em 0.4em;
+  font-size: 75%;
+  font-weight: 400;
+}
+pre {
+  padding: 1em;
+  overflow: auto;
+}
+pre code {
+  line-height: 1.45;
+  padding: 0;
+}
+/* HTML Color */
+/* code.language-html {
+  color: black;
+} */
+.language-html .hljs-tag {
+    color: var(--blue-color);
+  }
+.language-html .hljs-name,
+  .language-html .hljs-attr {
+    color: var(--brown-color);
+  }
+.language-html .hljs-string {
+    color: var(--green-color);
+  }
+/* CSS Color */
+code.language-css {
+  color: var(--blue-color);
+}
+.language-css {
+  /* .hljs-attribute {
+      color: #006984;
+    }
+    .hljs-keyword,
+    .hljs-selector-tag {
+      color: rgb(178, 112, 0);
+    } */
+}
+.language-css .hljs-selector-class {
+    color: var(--green-color);
+  }
+.language-css .hljs-attribute {
+    color: var(--brown-color);
+  }
+.language-css .hljs-comment {
+    color: #888;
+  }
+a {
+  text-decoration: none;
+  color: var(--green-color);
+}
+a:visited {
+  color: var(--blue-color);
+}
+a:hover {
+  color: inherit;
+}
+a[target="_blank"]:after {
+  content: " ↗";
+  font-size: 75%;
+  font-weight: 522.05882353;
+}
+em {
+  font-style: italic;
+}
+strong,
+b {
+  font-style: normal;
+  font-weight: 700;
+}
+ul,
+ol {
+  padding-left: 1em;
+  margin: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+/* List direct after title */
+/* h1 + ul, h1 + ol,
+h2 + ul, h2 + ol,
+h3 + ul, h3 + ol,
+h4 + ul, h4 + ol,
+h5 + ul, h5 + ol,
+h6 + ul, h6 + ol {
+  margin-top: 0.25em;
+} */
+li {
+  /* same as p bottom */
+  margin-bottom: 0.3em;
+}
+ul {
+  list-style: none;
+}
+ul > li::before {
+  content: "–\00A0";
+  color: var(--blue-color);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+ol {
+  counter-reset: ol-li;
+  list-style: none;
+  padding-left: 1.4em;
+}
+ol > li > p {
+  display: inline;
+}
+ol > li::before {
+  content: counter(ol-li) ".";
+  counter-increment: ol-li;
+
+  display: inline-block;
+  width: 1.4em;
+  margin-left: -1.4em;
+
+  text-align: center;
+  margin-right: 0.35em;
+}
+/* ol {
+  counter-reset: ol-li;
+  padding-left: 0;
+}
+
+ol > li {
+  position: relative;
+  margin: 0 0 0 1.75em;
+  list-style: none;
+  padding-bottom: 0.2em;
+}
+
+ol > li:before {
+  content: counter(ol-li);
+  counter-increment: ol-li;
+
+  position: absolute;
+  top: 0.1em;
+
+  left: -1.75em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+
+  font-size: 0.85em;
+  font-weight: 700;
+  text-align: center;
+
+  color: white;
+  background: var(--blue-color);
+} */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #222;
+
+  margin-top: 2.2rem;
+  margin-bottom: 2.4rem;
+}
+/* tags */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-top: 1.4em;
+  margin-bottom: 0.3em;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0.9em;
+}
+h2 {
+  font-size: 1.15rem;
+  margin-top: 1.6em;
+  margin-bottom: 0.4em;
+}
+h3 {
+  font-size: 1rem;
+}
+/* blog structure */
+.header {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  width: 96%;
+  max-width: 72rem;
+}
+.header__subline {
+  font-size: 1.1em;
+  margin-bottom: 1.5rem;
+}
+.header__info {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  /* deactivate Oldstyle figures and ligatures for uppercases */
+  --open-sans-fea-liga: "liga" off;
+  --open-sans-fea-lnum: "lnum" on;
+  --open-sans-fea-onum: "onum" off;
+  -webkit-font-feature-settings: var(--open-sans-fea-default), var(--open-sans-fea-liga),
+    var(--open-sans-fea-lnum), var(--open-sans-fea-onum);
+          font-feature-settings: var(--open-sans-fea-default), var(--open-sans-fea-liga),
+    var(--open-sans-fea-lnum), var(--open-sans-fea-onum);
+  font-size: 80%;
+}
+.document__item > .collection > .markdown,
+.document__item > .collection > .image {
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 60rem;
+}
+.debug .document__item > .collection > .markdown {
+  background-color: red;
+}
+.document__item > .collection > .grid > .grid__inner,
+.document__item > .collection > .markdown > .markdown__inner {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+/* components */
+:root {
+  --grid-item-column--span: 1;
+  --grid-columns-count: 12;
+}
+.grid__inner {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns-count), 1fr);
+  grid-column-gap: 1.5rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 72rem;
+}
+.grid__inner > .item {
+  grid-column: span var(--grid-item-column--span);
+}
+/* debug */
+.debug body::after {
+  content: "default";
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  color: #f00;
+  padding: 0.5em 1em;
+  background-color: #ccc;
+  z-index: 9999;
+}
+@media screen and (min-width: 37rem) {
+  .document__item > .collection > .grid > .grid__inner,
+  .document__item > .collection > .markdown > .markdown__inner {
+    margin-left: 15%;
+    margin-right: 5%;
+  }
+  .debug body::after {
+    content: "Size m";
+  }
+}
+@media screen and (min-width: 60rem) {
+  table {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 0.2em;
+  }
+  .header__subline {
+    font-size: 1.2em;
+    width: 70%;
+    margin-bottom: 2rem;
+  }
+  .document__item > .collection > .grid > .grid__inner,
+  .document__item > .collection > .markdown > .markdown__inner {
+    margin-left: 23%;
+    margin-right: 7%;
+  }
+  .debug body::after {
+    content: "Size l";
+  }
+}
+@media print {
+  :root {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    font-size: 10pt;
+  }
+  table {
+    page-break-before: always;
+  }
+  tr {
+    page-break-inside: avoid;
+    border-bottom: 0.1em solid var(--gray-color);
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+  }
+  @page {
+    size: A4;
+    margin: 5mm 10mm 7mm 25mm;
+  }
+}
+
