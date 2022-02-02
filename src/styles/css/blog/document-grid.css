@@ -1,5 +1,5 @@
 :root {
-  --grid-item-column--span: 1;
+  --grid-item-column-span: 1;
   --grid-columns-count: 12;
 }
 
@@ -15,5 +15,5 @@
 }
 
 .grid__inner > .item {
-  grid-column: span var(--grid-item-column--span);
+  grid-column: span var(--grid-item-column-span);
 }
