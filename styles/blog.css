@@ -420,7 +420,7 @@ h3 {
 }
 /* components */
 :root {
-  --grid-item-column--span: 1;
+  --grid-item-column-span: 1;
   --grid-columns-count: 12;
 }
 .grid__inner {
@@ -434,7 +434,7 @@ h3 {
   max-width: 72rem;
 }
 .grid__inner > .item {
-  grid-column: span var(--grid-item-column--span);
+  grid-column: span var(--grid-item-column-span);
 }
 /* debug */
 .debug body::after {
