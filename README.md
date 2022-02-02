@@ -18,14 +18,14 @@
 <!-- styles -->
 <link
   rel="stylesheet"
-  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/0791db7/styles/doc.critical.css"
+  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/72d62b5/styles/doc.critical.css"
   media="all"
 />
 <link
   rel="preload"
   as="style"
   onload="this.onload=null;this.rel='stylesheet'"
-  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/0791db7/styles/doc.rest.css"
+  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/72d62b5/styles/doc.rest.css"
   media="all"
 />
 ```
@@ -42,14 +42,14 @@
 <!-- styles -->
 <link
   rel="stylesheet"
-  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/0791db7/styles/blog.critical.css"
+  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/72d62b5/styles/blog.critical.css"
   media="all"
 />
 <link
   rel="preload"
   as="style"
   onload="this.onload=null;this.rel='stylesheet'"
-  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/0791db7/styles/blog.rest.css"
+  href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/72d62b5/styles/blog.rest.css"
   media="all"
 />
 ```
