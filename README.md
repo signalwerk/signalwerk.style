@@ -74,7 +74,7 @@
 
 ## Usage
 
-- [Signalwerk · Webtypo](https://webtypo.signalwerk.ch/
+- [Signalwerk · Webtypo](https://webtypo.signalwerk.ch/)
 
 <!--
 npm run start-blog
