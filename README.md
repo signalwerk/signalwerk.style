@@ -36,7 +36,7 @@
 <!-- fonts -->
 <link rel="preconnect" href="https://fonts.signalwerk.ch" />
 <link
-  href="https://fonts.signalwerk.ch/css/latest/family=Open+Sans:ital,wght@0,300..800;1,300..800.css"
+  href="https://fonts.signalwerk.ch/css/latest/family=Work+Sans:ital,wght@0,100..900;1,100..900.css"
   rel="stylesheet"
 />
 <!-- styles -->
