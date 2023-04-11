@@ -19,7 +19,8 @@ table {
   }
 }
 
-th {
+/* if the header is not having an align-attribute align it left */
+th:not([align]) {
   text-align: left;
 }
 
