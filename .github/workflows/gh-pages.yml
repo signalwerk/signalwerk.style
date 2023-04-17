@@ -31,10 +31,6 @@ jobs:
       - name: 🔨 npm build
         run: npm run build
 
-      - name: 🏷 stamp
-        run: |
-          bash ./ci/update-readme.sh
-
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
@@ -42,11 +38,12 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
-      # - name: update readme
-      #   run: bash ./ci/update-readme.sh
+      - name: 🏷 stamp
+        run: |
+          bash ./ci/update-readme.sh
 
-      # - uses: EndBug/add-and-commit@v9
-      #   with:
-      #     message: Update readme [CI SKIP]
-      #     committer_name: GitHub Actions
-      #     committer_email: action@github.com
+      - uses: EndBug/add-and-commit@v9
+        with:
+          message: Update readme [CI SKIP]
+          committer_name: GitHub Actions
+          committer_email: action@github.com
