@@ -1,4 +1,6 @@
 /* https://github.com/googlefonts/opensans */
+
+
 /* 
 
 regular: 400 = 83
@@ -30,7 +32,11 @@ formula:
 400 + ((83 - (83 * .75)) / .75) / ((151 - 83) / (700 - 400))
 
 */
+
+
 /* todo this is not done right now*/
+
+
 :root {
   --open-sans-fea-aalt: "aalt" off;
   --open-sans-fea-dnom: "dnom" off;
@@ -61,11 +67,19 @@ formula:
     var(--open-sans-fea-subs), var(--open-sans-fea-sups),
     var(--open-sans-fea-tnum), var(--open-sans-fea-zero);
 }
+
+
 /* compile variables */
+
+
 /* MediaQuery */
+
+
 /* inspiration
 - https://alligator.io/css/minimal-css-reset/
 */
+
+
 :root {
   --green-color: #006984; /* c: 100 m: 0 y: 20 k: 65 */
   --blue-color: #0054a2; /* c: 100 m: 70 y: 10 k: 52 */
@@ -73,32 +87,46 @@ formula:
   --brown-color: rgb(178, 112, 0);
   --gray-red: #f00; /* c: 0 m: 100 y: 100 k: 0 */
 }
+
+
 :root {
   -webkit-font-feature-settings: var(--open-sans-fea-default);
           font-feature-settings: var(--open-sans-fea-default);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+
 ::-moz-selection {
   background: var(--blue-color);
   color: white;
   text-shadow: none;
 }
+
+
 ::selection {
   background: var(--blue-color);
   color: white;
   text-shadow: none;
 }
+
+
 *,
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
+
+
 body {
   margin: 0;
 }
+
+
 /* modifiers */
+
+
 .uppercase {
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -111,20 +139,32 @@ body {
           font-feature-settings: var(--open-sans-fea-default), var(--open-sans-fea-liga),
     var(--open-sans-fea-lnum), var(--open-sans-fea-onum);
 }
+
+
 /* tags */
+
+
 small,
 .small {
   font-size: 80%;
 }
+
+
 /* @import "./css/heading.css"; */
+
+
 img {
   max-width: 100%;
   display: block;
 }
+
+
 p {
   margin-top: 0;
   margin-bottom: 0.3em;
 }
+
+
 table {
   width: 100%;
   font-size: 0.9em;
@@ -133,12 +173,21 @@ table {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-th {
+
+
+/* if the header is not having an align-attribute align it left */
+
+
+th:not([align]) {
   text-align: left;
 }
+
+
 tr {
   border-bottom: 1px solid var(--gray-color);
 }
+
+
 td,
 th {
   vertical-align: top;
@@ -147,10 +196,14 @@ th {
   padding-top: 0.25em;
   padding-bottom: 0.25em;
 }
+
+
 td:last-child,
 th:last-child {
   padding-right: 0;
 }
+
+
 table {
   /* lining figures in tables */
   --open-sans-fea-pnum: "pnum" off;
@@ -162,6 +215,8 @@ table {
           font-feature-settings: var(--open-sans-fea-default), var(--open-sans-fea-pnum),
     var(--open-sans-fea-lnum);
 }
+
+
 blockquote {
   font-weight: 700;
   color: var(--green-color);
@@ -171,6 +226,8 @@ blockquote {
   margin-bottom: 2rem;
   margin-left: 2rem;
 }
+
+
 pre,
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -178,38 +235,60 @@ code {
   background-color: var(--gray-color);
   border-radius: 0.2em;
 }
+
+
 code {
   margin: 0;
   padding: 0.2em 0.4em;
   font-size: 75%;
   font-weight: 400;
 }
+
+
 pre {
   padding: 1em;
   overflow: auto;
 }
+
+
 pre code {
   line-height: 1.45;
   padding: 0;
 }
+
+
 /* HTML Color */
+
+
 /* code.language-html {
   color: black;
 } */
+
+
 .language-html .hljs-tag {
     color: var(--blue-color);
   }
+
+
 .language-html .hljs-name,
   .language-html .hljs-attr {
     color: var(--brown-color);
   }
+
+
 .language-html .hljs-string {
     color: var(--green-color);
   }
+
+
 /* CSS Color */
+
+
 code.language-css {
   color: var(--blue-color);
 }
+
+
 .language-css {
   /* .hljs-attribute {
       color: #006984;
@@ -219,38 +298,58 @@ code.language-css {
       color: rgb(178, 112, 0);
     } */
 }
+
+
 .language-css .hljs-selector-class {
     color: var(--green-color);
   }
+
+
 .language-css .hljs-attribute {
     color: var(--brown-color);
   }
+
+
 .language-css .hljs-comment {
     color: #888;
   }
+
+
 a {
   text-decoration: none;
   color: var(--green-color);
 }
+
+
 a:visited {
   color: var(--blue-color);
 }
+
+
 a:hover {
   color: inherit;
 }
+
+
 a[target="_blank"]:after {
   content: " ↗";
   font-size: 75%;
   font-weight: 522.05882353;
 }
+
+
 em {
   font-style: italic;
 }
+
+
 strong,
 b {
   font-style: normal;
   font-weight: 700;
 }
+
+
 ul,
 ol {
   padding-left: 1em;
@@ -258,6 +357,8 @@ ol {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+
 ul ul,
   ul ol,
   ol ul,
@@ -265,7 +366,11 @@ ul ul,
     margin-top: 0.25rem;
     margin-bottom: 0.5rem;
   }
+
+
 /* List direct after title */
+
+
 /* h1 + ul, h1 + ol,
 h2 + ul, h2 + ol,
 h3 + ul, h3 + ol,
@@ -274,13 +379,19 @@ h5 + ul, h5 + ol,
 h6 + ul, h6 + ol {
   margin-top: 0.25em;
 } */
+
+
 li {
   /* same as p bottom */
   margin-bottom: 0.3em;
 }
+
+
 ul {
   list-style: none;
 }
+
+
 ul > li::before {
   content: "–\00A0";
   color: var(--blue-color);
@@ -288,14 +399,20 @@ ul > li::before {
   width: 1em;
   margin-left: -1em;
 }
+
+
 ol {
   counter-reset: ol-li;
   list-style: none;
   padding-left: 1.4em;
 }
+
+
 ol > li > p {
   display: inline;
 }
+
+
 ol > li::before {
   content: counter(ol-li) ".";
   counter-increment: ol-li;
@@ -307,6 +424,8 @@ ol > li::before {
   text-align: center;
   margin-right: 0.35em;
 }
+
+
 /* ol {
   counter-reset: ol-li;
   padding-left: 0;
@@ -338,6 +457,8 @@ ol > li:before {
   color: white;
   background: var(--blue-color);
 } */
+
+
 hr {
   border: none;
   height: 2px;
@@ -346,7 +467,53 @@ hr {
   margin-top: 2.2rem;
   margin-bottom: 2.4rem;
 }
+
+
+/* components */
+
+
+:root {
+  --grid-item-column--span: 1;
+  --grid-columns--count: 12;
+}
+
+
+.grid__inner {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns--count), 1fr);
+  grid-column-gap: 1.5rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 60rem;
+}
+
+
+.grid__inner > .item {
+  grid-column: span var(--grid-item-column--span);
+}
+
+
+/* debug */
+
+
+.debug body::after {
+  content: "default";
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  color: #f00;
+  padding: 0.5em 1em;
+  background-color: #ccc;
+  z-index: 9999;
+}
+
+
 /* tags */
+
+
 h1,
 h2,
 h3,
@@ -358,20 +525,30 @@ h6 {
   margin-bottom: 0.3em;
   line-height: 1.2;
 }
+
+
 h1 {
   font-size: 1.2rem;
   margin-top: 0;
   margin-bottom: 0.9em;
 }
+
+
 h2 {
   font-size: 1.15rem;
   margin-top: 1.6em;
   margin-bottom: 0.4em;
 }
+
+
 h3 {
   font-size: 1rem;
 }
+
+
 /* blog structure */
+
+
 .header {
   margin-left: auto;
   margin-right: auto;
@@ -380,10 +557,14 @@ h3 {
   width: 96%;
   max-width: 72rem;
 }
+
+
 .header__subline {
   font-size: 1.1em;
   margin-bottom: 1.5rem;
 }
+
+
 .header__info {
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -397,6 +578,8 @@ h3 {
     var(--open-sans-fea-lnum), var(--open-sans-fea-onum);
   font-size: 80%;
 }
+
+
 .document__item > .collection > .markdown,
 .document__item > .collection > .image {
   margin-left: auto;
@@ -404,57 +587,38 @@ h3 {
 
   max-width: 60rem;
 }
+
+
 .debug .document__item > .collection > .markdown {
   background-color: red;
 }
+
+
 .document__item > .collection > .grid > .grid__inner,
 .document__item > .collection > .markdown > .markdown__inner {
   margin-left: 2%;
   margin-right: 2%;
 }
-/* components */
-:root {
-  --grid-item-column-span: 1;
-  --grid-columns-count: 12;
-}
-.grid__inner {
-  display: grid;
-  grid-template-columns: repeat(var(--grid-columns-count), 1fr);
-  grid-column-gap: 1.5rem;
 
-  margin-left: auto;
-  margin-right: auto;
 
-  max-width: 72rem;
-}
-.grid__inner > .item {
-  grid-column: span var(--grid-item-column-span);
-}
-/* debug */
-.debug body::after {
-  content: "default";
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  font-size: 12px;
-  color: #f00;
-  padding: 0.5em 1em;
-  background-color: #ccc;
-  z-index: 9999;
-}
 @media screen and (min-width: 37rem) {
+  .debug body::after {
+    content: "Size m";
+  }
   .document__item > .collection > .grid > .grid__inner,
   .document__item > .collection > .markdown > .markdown__inner {
     margin-left: 15%;
     margin-right: 5%;
   }
-  .debug body::after {
-    content: "Size m";
-  }
 }
+
+
 @media screen and (min-width: 60rem) {
   table {
     font-size: 1em;
+  }
+  .debug body::after {
+    content: "Size l";
   }
   h1 {
     font-size: 5rem;
@@ -470,10 +634,9 @@ h3 {
     margin-left: 23%;
     margin-right: 7%;
   }
-  .debug body::after {
-    content: "Size l";
-  }
 }
+
+
 @media print {
   :root {
     -webkit-print-color-adjust: exact;
@@ -495,4 +658,5 @@ h3 {
     margin: 5mm 10mm 7mm 25mm;
   }
 }
+
 

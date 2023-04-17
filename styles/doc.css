@@ -139,7 +139,8 @@ table {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-th {
+/* if the header is not having an align-attribute align it left */
+th:not([align]) {
   text-align: left;
 }
 tr {
@@ -352,6 +353,36 @@ hr {
   margin-top: 2.2rem;
   margin-bottom: 2.4rem;
 }
+/* components */
+:root {
+  --grid-item-column--span: 1;
+  --grid-columns--count: 12;
+}
+.grid__inner {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns--count), 1fr);
+  grid-column-gap: 1.5rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 36rem;
+}
+.grid__inner > .item {
+  grid-column: span var(--grid-item-column--span);
+}
+/* debug */
+.debug body::after {
+  content: "default";
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  color: #f00;
+  padding: 0.5em 1em;
+  background-color: #ccc;
+  z-index: 9999;
+}
 /* tags */
 h1,
 h2,
@@ -439,6 +470,9 @@ hr + h2:before, hr + h3:before, hr + h4:before {
     /* critical */
     font-size: 17px;
   }
+  .debug body::after {
+    content: "Size m";
+  }
 }
 @media screen and (min-width: 60rem) {
   :root {
@@ -447,6 +481,9 @@ hr + h2:before, hr + h3:before, hr + h4:before {
   }
   table {
     font-size: 1em;
+  }
+  .debug body::after {
+    content: "Size l";
   }
 }
 @media print {
