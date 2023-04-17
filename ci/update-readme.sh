@@ -2,7 +2,7 @@ set -e # Exit with nonzero exit code if anything fails
 
 echo "-- start"
 
-SOURCE_BRANCH="${SOURCE_BRANCH:-master}"
+SOURCE_BRANCH="${SOURCE_BRANCH:-main}"
 ROOT_DIR=$(pwd)
 REPO=`git config remote.origin.url`
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
@@ -31,7 +31,7 @@ git config user.name "CI System"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
 
 
-git checkout master
+git checkout main
 
 
 
