@@ -12,6 +12,11 @@ echo "-- start"
 BRANCH="${SOURCE_BRANCH:-main}"
 REPOSITORY="${GITHUB_REPOSITORY#*/}"
 
+if [ "$1" != "" ]; then
+    echo "Branchname to track was provided as first argument"
+    BRANCH="$1"
+fi
+
 echo "   * Variables"
 echo "     – BRANCH=${BRANCH}"
 echo "     – GITHUB_REPOSITORY=${GITHUB_REPOSITORY}"
