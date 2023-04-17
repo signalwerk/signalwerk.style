@@ -19,6 +19,10 @@
 @import "./css/list.css";
 @import "./css/hr.css";
 
+/* components */
+@import "./css/grid.css";
+@import "./css/debug.css";
+
 @media print {
   @page {
     size: A4;

@@ -1,13 +1,10 @@
+@import "./css/blog/document-main.var.css";
 @import "./base";
 
 /* tags */
 @import "./css/heading--blog.css";
 
 /* blog structure */
-@import "./css/blog/document-main.var.css";
 @import "./css/blog/document-header.css";
 @import "./css/blog/document-content.css";
 
-/* components */
-@import "./css/blog/document-grid.css";
-@import "./css/debug.css";
