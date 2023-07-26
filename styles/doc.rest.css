@@ -450,7 +450,7 @@ hr + h2:before, hr + h3:before, hr + h4:before {
 }
 .header + .document__item:before {
     content: "";
-    margin-bottom: -1.7rem;
+    margin-bottom: -1.5rem;
     display: block;
   }
 .header__subline {
