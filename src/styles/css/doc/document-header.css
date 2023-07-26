@@ -28,7 +28,7 @@
   /* same as <hr/> bottom */
   &:before {
     content: "";
-    margin-bottom: -1.7rem;
+    margin-bottom: -1.5rem;
     display: block;
   }
 }
